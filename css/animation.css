@@ -1,0 +1,272 @@
+/*
+TO-DO
+
+animere gameOver/gameComplete?
+fiks noget mer lækkert som bad-/goodEffect
+
+
+*/
+
+/* MIDGROUND (clouds) MOVE */
+.bg_move {
+  animation-name: bg_move;
+  animation-iteration-count: 1;
+  animation-duration: 90s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  transform-origin: right;
+}
+@keyframes bg_move {
+  0% {
+    scale: 1.5;
+    transform: translateX(-35%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+/* BUTTON ANIMATIONS START */
+.button {
+  z-index: 1000;
+}
+.button:hover {
+  animation-name: buttonHover;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-duration: 0.25s;
+}
+.toothyMove {
+  animation-name: toothy_kf;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+@keyframes toothy_kf {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.05;
+  }
+  100% {
+    scale: 1;
+  }
+}
+@keyframes buttonHover {
+  0% {
+    scale: 1;
+  }
+  100% {
+    transform: skew(10px 10px);
+    scale: 1.05;
+  }
+}
+/* BUTTON ANIMATIONS STOP */
+/* TIMER START */
+.timer {
+  animation-name: timer_kf;
+  animation-duration: 25s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: ease;
+}
+@keyframes timer_kf {
+  0% {
+    clip-path: inset(0 0 0 0);
+  }
+  100% {
+    clip-path: inset(0 100% 0 0);
+  }
+}
+/* TIMER STOP */
+/* ANIMATIONS START */
+.fall1 {
+  animation-name: fall1_kf;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+.fall2 {
+  animation-name: fall2_kf;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+.fall3 {
+  animation-name: fall3_kf;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes fall1_kf {
+  100% {
+    translate: 0% 600%;
+    transform: rotate(-250deg);
+    scale: 1.2;
+  }
+}
+@keyframes fall2_kf {
+  100% {
+    translate: 0% 600%;
+    transform: rotate(250deg);
+    scale: 0.9;
+  }
+}
+@keyframes fall3_kf {
+  100% {
+    scale: 1.2;
+    translate: 0% 600%;
+    transform: rotate(-250deg);
+  }
+}
+.freeze {
+  animation-play-state: paused;
+}
+.popup {
+  animation-name: pop_kf;
+}
+@keyframes pop_kf {
+  0% {
+    scale: 0;
+  }
+  100% {
+    scale: 1;
+  }
+}
+/* ANIMATIONS STOP */
+.speed1 {
+  animation-duration: 4s;
+}
+.speed2 {
+  animation-duration: 3.5s;
+}
+.speed3 {
+  animation-duration: 3s;
+}
+.speed4 {
+  animation-duration: 2s;
+}
+.speed5 {
+  animation-duration: 1.5s;
+}
+/* GOOD BAD EFFECT START */
+.goodEffect1 {
+  animation-name: good1_kf;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+.goodEffect2 {
+  animation-name: good2_kf;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes good1_kf {
+  0% {
+    scale: 1.4;
+  }
+  25% {
+    scale: 0.6;
+  }
+  100% {
+    scale: 0;
+    transform: rotate(270deg);
+  }
+}
+@keyframes good2_kf {
+  0% {
+    scale: 1.2;
+  }
+  50% {
+    scale: 0.6;
+  }
+  100% {
+    scale: 0;
+  }
+}
+.badEffect1 {
+  animation-name: bad1_kf;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+.badEffect2 {
+  animation-name: bad2_kf;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes bad1_kf {
+  0% {
+    scale: 0.9;
+  }
+  25% {
+    scale: 0.5;
+  }
+  100% {
+    scale: 0;
+    transform: rotate(-270deg);
+  }
+}
+@keyframes bad2_kf {
+  0% {
+    scale: 1.5;
+  }
+  25% {
+    scale: 0.8;
+  }
+  50% {
+    scale: 0.5;
+  }
+  100% {
+    scale: 0;
+  }
+}
+/* GOOD BAD EFFECT STOP */
+/* POS START */
+.pos1 {
+  top: -20%;
+  left: 20%;
+}
+.pos2 {
+  top: -20%;
+  left: 30%;
+}
+.pos3 {
+  top: -20%;
+  left: 45%;
+}
+.pos4 {
+  top: -20%;
+  left: 60%;
+}
+.pos5 {
+  top: -20%;
+  left: 75%;
+}
+.pos6 {
+  top: -20%;
+  left: 90%;
+}
+/* POS STOP */
+
+/* DELAY START */
+.delay1 {
+  animation-delay: 0ms;
+}
+.delay2 {
+  animation-delay: 100ms;
+}
+.delay3 {
+  animation-delay: 200ms;
+}
+.delay4 {
+  animation-delay: 300ms;
+}
+/* DELAY STOP */

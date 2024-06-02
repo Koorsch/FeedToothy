@@ -1,0 +1,337 @@
+@font-face {
+  font-family: arco;
+  src: url("../assets/fonts/ARCO.woff2") format("woff2");
+}
+@font-face {
+  font-family: bubble;
+  src: url("../assets/fonts/BLACK_BUBBLE.woff2") format("woff2");
+}
+
+/* 
+container-type: inline-type;
+sammen med font-size: clamp(min-size, størrelse på skærmen, max-width);
+=
+responsivt?
+*/
+* {
+  box-sizing: border-box;
+  font-family: "arco", "bubble", monospace, sans-serif;
+  border: 0;
+  margin: 0;
+  hyphens: none;
+  scroll-behavior: smooth;
+  container-type: inline-type;
+}
+body {
+  background-color: #3b9410;
+  max-width: 1400px;
+  margin: auto;
+}
+h1 {
+  color: white;
+  font-size: clamp(2.5rem, 4vw, 3rem);
+  text-shadow: -4px 4px #104825;
+  margin: 25px;
+}
+h2 {
+  color: white;
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  text-shadow: -4px 4px #104825;
+  margin: 25px;
+}
+h3 {
+  color: white;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  text-shadow: -4px 4px #104825;
+  margin: 25px;
+}
+p {
+  color: white;
+  font-family: "bubble";
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  text-shadow: -3px 3px #104825;
+}
+figcaption {
+  color: white;
+  font-family: "bubble";
+  text-align: center;
+  font-size: clamp(1.5rem, 1.5vw, 2rem);
+  text-shadow: -3px 3px #104825;
+}
+.diagram {
+  display: grid;
+  gap: 15px;
+}
+.diagram img {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  background-color: white;
+  border-radius: 8px;
+  padding: 8px;
+}
+#diagram1 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin-bottom: 20px;
+}
+#diagram2 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.textbox {
+  width: 100%;
+  height: fit-content;
+  padding: 10px;
+  text-align: center;
+  background-color: #6dc140;
+  border-radius: 8px;
+}
+.textbox h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.startMenu {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  gap: 20px;
+}
+.startMenu.row {
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+#ind1 p {
+  justify-items: center;
+  text-align: center;
+}
+.startMenu h1 {
+  max-width: 40ch;
+}
+.startMenu.col {
+  grid-template-columns: 1fr;
+  width: 100%;
+  height: 100%;
+}
+#toothStart {
+  justify-self: center;
+  align-self: center;
+  height: 100%;
+  width: 100%;
+}
+.startMenu img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.asset {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-flow: row;
+  overflow: hidden;
+  margin: auto;
+  gap: 20px;
+  padding: 10px;
+  justify-content: center;
+}
+.asset.col2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.asset.col {
+  grid-template-columns: 1fr;
+}
+.asset div {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+.asset a:hover {
+  color: #6dc140;
+}
+.asset figure {
+  margin: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.asset img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 10px;
+}
+.asset figcaption {
+  margin-bottom: 10px;
+}
+nav {
+  background-color: #3b9410;
+  height: 85px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 10px;
+  margin-bottom: 10px;
+  position: relative;
+  box-shadow: 2px 2px 6px 3px #104825;
+  border-radius: 5px;
+  text-decoration: none;
+}
+#footertext {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: clamp(1.2rem, 2vw, 2.5rem);
+  font-family: "arco", sans-serif;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+a:visited,
+a:focus,
+a:visited,
+a:link {
+  text-decoration: none;
+  color: white;
+}
+#logo {
+  text-decoration: none;
+  color: white;
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  text-shadow: -4px 4px #104825;
+  margin: 25px;
+}
+#logo h1 {
+  padding: 10px;
+}
+#sounds audio {
+  margin-bottom: 5px;
+}
+.menu {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1000;
+}
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.menu ul li {
+  margin: 0 5px;
+}
+.menu ul li a {
+  color: #fff;
+  text-shadow: -2px 2px #104825;
+  text-decoration: none;
+  font-family: "bubble";
+  padding: 5px;
+}
+.menu ul li a:hover {
+  color: #6dc140;
+}
+.burger {
+  display: none;
+  cursor: pointer;
+}
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+.header {
+  text-align: center;
+}
+#logo :hover {
+  color: #6dc140;
+}
+.button:hover {
+  animation-name: buttonHover;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-duration: 0.25s;
+}
+@keyframes buttonHover {
+  0% {
+    scale: 1;
+  }
+  100% {
+    transform: skew(10px 10px);
+    scale: 1.05;
+  }
+}
+#versioner video {
+  width: 100%;
+  padding: 10px;
+}
+#versionX video {
+  width: 100%;
+  padding: 10px;
+}
+@media (max-width: 1108px) {
+  nav {
+    background-color: #3b9410;
+    height: 65px;
+  }
+  .menu ul {
+    flex-direction: column;
+    position: absolute;
+    top: 45px;
+    right: 5px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 60px;
+    display: none;
+  }
+  .menu ul li {
+    margin: 5px 5px;
+    padding: 5px 5px;
+    justify-content: center;
+    border: 2px solid #104825;
+    border-radius: 10px;
+    background-color: #3b9410;
+  }
+  .burger {
+    display: block;
+  }
+  .menu.open ul {
+    display: grid;
+  }
+  #logo > h1 {
+    color: white;
+    font-size: 38px;
+  }
+  #diagram1,
+  #diagram2 {
+    grid-template-columns: 1fr;
+  }
+  .asset {
+    grid-template-columns: 1fr;
+  }
+  #versioner {
+    grid-template-columns: 1fr;
+  }
+  .startMenu {
+    grid-template-columns: 1fr;
+  }
+  .startMenu p {
+    max-width: 65ch;
+    text-align: center;
+  }
+  .startMenu img {
+    max-width: 400px;
+  }
+}

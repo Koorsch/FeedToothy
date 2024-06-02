@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robot" content="noindex">
+    <link rel="icon" type="image/x-icon" href="assets/svg/favicon.svg">
+    <link rel="stylesheet" href="css/general.css">
+    <title>Tema 4 - Feed Toothy</title>
+</head>
+
+<body>
+    <script>
+        function toggleMenu() {
+            document.querySelector(".menu").classList.toggle("open");
+        }
+    </script>
+    <header>
+        <nav>
+            <div id="logo">
+                <a href="index.html">Feed Toothy</a>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="spil.html">The Game</a></li>
+                    <li><a href="grafik.html">Graphics</a></li>
+                    <li><a href="assets.html">Assets</a></li>
+                    <li><a href="teknik.html">Technical Documentation</a></li>
+                </ul>
+                <div class="burger" onclick="toggleMenu()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="startMenu">
+            <div class="startMenu col">
+                <img id="toothStart" src="assets/svg/prod/logo.svg" alt="Feed Toothy!">
+            </div>
+            <div class="startMenu row">
+                <div id="ind1">
+                    <h1>Velkommen til min website!</h1>
+                    <p>Kig rundt lidt i menuet optil for at se hvordan jeg arbejdet med mit spil og endelig prove
+                        spillet!
+                    </p>
+                </div>
+                <div id="ind2">
+                    <a href="spil.html">
+                        <img class="button" src="assets/svg/prod/play_button.svg" alt="Playknap">
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+    </main>
+    <footer>
+        <p id="footertext">Andreas Ekvall-Hofvander // Feed Toothy 2023</p>
+    </footer>
+</body>
+
+</html>

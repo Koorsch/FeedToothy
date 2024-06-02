@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robot" content="noindex">
+    <link rel="stylesheet" href="css/general.css">
+    <title>Assets til spillet</title>
+</head>
+
+<body>
+    <script>
+        function toggleMenu() {
+            document.querySelector(".menu").classList.toggle("open");
+        }
+        function playSound() {
+            document.querySelector(".sound").play();
+        }
+    </script>
+    <header>
+        <nav>
+            <div id="logo">
+                <h1><a href="index.html">Feed Toothy</a></h1>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="spil.html">The Game</a></li>
+                    <li><a href="grafik.html">Graphics</a></li>
+                    <li><a href="assets.html">Assets</a></li>
+                    <li><a href="teknik.html">Technical Documentation</a></li>
+                </ul>
+                <div class="burger" onclick="toggleMenu()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h2 class="header">Assetliste</h2>
+        <p class="header">Alle de dejlige grafiske tingene (og lyden)</p>
+        <h2>#Screen</h2>
+        <article id="title_screen" class="asset">
+            <div>
+                <h3>Title Screen</h3>
+                <figure>
+                    <img src="assets/svg/prod/title.svg" alt="forside">
+                    <figcaption>Velkomstskerm</figcaption>
+                </figure>
+            </div>
+            <div>
+                <h3>Game Complete</h3>
+                <figure>
+                    <img src="assets/svg/prod/game_complete.svg" alt="Level complete!">
+                    <figcaption>Vinderskerm</figcaption>
+                </figure>
+            </div>
+            <div>
+                <h3>Game Over!</h3>
+                <figure>
+                    <img src="assets/svg/prod/game_over.svg" alt="Game over!">
+                    <figcaption>Taberskerm</figcaption>
+                </figure>
+            </div>
+        </article>
+        <h2>#UI</h2>
+        <article id="things" class="asset col2">
+            <div>
+                <h3>Gode ting</h3>
+                <figure>
+                    <img src="assets/svg/prod/good_things.svg" alt="Good things">
+                    <figcaption>Points++</figcaption>
+                </figure>
+            </div>
+            <div>
+                <h3>Ikke gode ting</h3>
+                <figure>
+                    <img src="assets/svg/prod/bad_things.svg" alt="Bad things">
+                    <figcaption>Life--</figcaption>
+                </figure>
+            </div>
+        </article>
+        <article id="buttons" class="asset">
+            <div>
+                <h3>Play knap</h3>
+                <figure>
+                    <img src="assets/svg/prod/play_button.svg" alt="Play knap">
+                    <figcaption>Spil knap</figcaption>
+                </figure>
+            </div>
+            <div>
+                <h3>How-to knap</h3>
+                <figure>
+                    <img src="assets/svg/prod/button_faq.svg" alt="Howto knap">
+                    <figcaption>Tutorial</figcaption>
+                </figure>
+            </div>
+            <div>
+                <h3>Replay knap</h3>
+                <figure>
+                    <img src="assets/svg/prod/playagain_button.svg" alt="Spil igen knap">
+                    <figcaption>Spil igen</figcaption>
+                </figure>
+            </div>
+        </article>
+        <h2>#Grunder</h2>
+        <article id="grounds" class="asset">
+            <div>
+                <h3>Baggrund</h3>
+                <figure>
+                    <img src="assets/svg/prod/background.svg" alt="background">
+                    <figcaption>Spil knap</figcaption>
+                </figure>
+            </div>
+            <div>
+                <h3>Moln</h3>
+                <figure>
+                    <img src="assets/svg/prod/middleground.svg" alt="middleground">
+                    <figcaption>Skaber lidt dybde</figcaption>
+                </figure>
+            </div>
+            <div>
+                <h3>Forgrund</h3>
+                <figure>
+                    <img src="assets/svg/prod/foreground.svg" alt="foreground">
+                    <figcaption>Spil igen</figcaption>
+                </figure>
+            </div>
+        </article>
+        <h2>#Lyd</h2>
+        <article id="sounds" class="asset">
+            <div>
+                <h3>Good sounds</h3>
+                <audio src="assets/sound/good1_1.mp3" type="audio/mp3" controls></audio>
+                <audio src="assets/sound/good1_2.mp3" type="audio/mp3" controls></audio>
+                <audio src="assets/sound/good1_3.mp3" type="audio/mp3" controls></audio>
+                <audio src="assets/sound/good1_4.mp3" type="audio/mp3" controls></audio>
+                <audio src="assets/sound/good2.mp3" type="audio/mp3" controls></audio>
+            </div>
+            <div>
+                <h3>Bad sounds</h3>
+                <audio src="assets/sound/bad.mp3" type="audio/mp3" controls></audio>
+            </div>
+            <div>
+                <h3>Win / Lose sounds</h3>
+                <audio src="assets/sound/game_lose.mp3" type="audio/mp3" controls></audio>
+                <audio src="assets/sound/game_win.mp3" type="audio/mp3" controls></audio>
+
+            </div>
+        </article>
+    </main>
+    <footer>
+        <p id="footertext">Andreas Ekvall-Hofvander // Feed Toothy 2023</p>
+    </footer>
+</body>
+
+</html>

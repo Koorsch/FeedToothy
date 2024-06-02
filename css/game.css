@@ -1,0 +1,397 @@
+#screen {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 9;
+  position: relative;
+  background-size: contain;
+  overflow: hidden;
+  border-radius: 4px;
+}
+.hide {
+  display: none;
+}
+
+#game {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#start {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#start_screen {
+  height: 55%;
+  width: 39%;
+  position: relative;
+  aspect-ratio: 300/200;
+  top: 5%;
+  left: 29%;
+  background-image: url(../assets/svg/prod/title.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#game_background {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../assets/svg/prod/background.svg);
+  background-size: cover;
+}
+#game_midground {
+  height: 80%;
+  width: 300%;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  background-image: url(../assets/svg/prod/middleground.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#game_foreground {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../assets/svg/prod/foreground.svg);
+  background-size: cover;
+  pointer-events: none;
+}
+#game_elements {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* overflow: hidden; */
+}
+#game_ui {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  color: white;
+  font-family: "bubble";
+  font-size: 2cqw;
+  text-shadow: -3px 3px #104825;
+}
+#life_board {
+  width: 35%;
+  position: absolute;
+  aspect-ratio: 1/2;
+  top: 1%;
+  left: 7%;
+}
+#score_board {
+  width: 35%;
+  position: absolute;
+  aspect-ratio: 1/2;
+  top: 1%;
+  left: 77%;
+}
+#time_board {
+  width: 50%;
+  height: 3%;
+  position: absolute;
+  aspect-ratio: 16/9;
+  top: 1%;
+  left: 23%;
+}
+#time_container {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: relative;
+  border-radius: 6px;
+  box-shadow: inset 0 0 5px #104825, 0 0 5px #104825;
+  background-color: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#time_sprite {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  position: absolute;
+  background-image: linear-gradient(to right, #fdb813, #f05e23, #e80f2e, #8f0e2a);
+  background-size: contain;
+}
+#game_over {
+  height: 100%;
+  width: 80%;
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#game_over_screen {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  aspect-ratio: 16 / 9;
+  background-image: url(../assets/svg/prod/game_over.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#game_complete {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#game_complete_screen {
+  height: 80%;
+  width: 80%;
+  position: absolute;
+  top: 26%;
+  left: 10%;
+  aspect-ratio: 16/9;
+  background-image: url(../assets/svg/prod/game_complete.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#tutorial {
+  height: 80%;
+  width: 80%;
+  position: absolute;
+  top: 8%;
+  left: 10%;
+  aspect-ratio: 16/9;
+  background-color: rgba(0, 128, 0);
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+#tutorial_screen {
+  margin: 20px;
+}
+#instructions {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr;
+  gap: 35px;
+  margin-top: 30px;
+}
+#instructions > div:first-child {
+  text-align: center;
+}
+
+#toothy {
+  position: absolute;
+  background-image: url(../assets/svg/prod/toothy_left.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 25%;
+  height: 45%;
+  top: 72%;
+  left: 3%;
+  z-index: 3;
+  pointer-events: none;
+}
+#good_thing {
+  position: absolute;
+  width: 30%;
+  height: 40%;
+  top: 35%;
+  left: 18%;
+  aspect-ratio: 16/9;
+  background-image: url(../assets/svg/prod/good_things.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#bad_thing {
+  width: 30%;
+  height: 30%;
+  top: 40%;
+  left: 52%;
+  position: absolute;
+  background-image: url(../assets/svg/prod/bad_things.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#go_points {
+  position: absolute;
+  top: 28%;
+  left: 39%;
+  color: white;
+  font-family: "arco";
+  font-size: 24px;
+  text-shadow: -3px 3px #104825;
+}
+#gc_points {
+  position: absolute;
+  top: 38%;
+  left: 39%;
+  color: white;
+  font-family: "arco";
+  font-size: 24px;
+  text-shadow: -3px 3px #104825;
+}
+.points_txt {
+  font-size: 20px;
+}
+/* GOOD BAD ELEMENTER START */
+#good_container1 {
+  position: absolute;
+  width: 9%;
+  aspect-ratio: 4/5;
+}
+#good_container2 {
+  position: absolute;
+  width: 9%;
+  aspect-ratio: 4/5;
+}
+#good_container3 {
+  position: absolute;
+  width: 9%;
+  aspect-ratio: 4/5;
+}
+#bad_container1 {
+  position: absolute;
+  width: 9%;
+  aspect-ratio: 4/5;
+}
+#bad_container2 {
+  position: absolute;
+  width: 10%;
+  aspect-ratio: 4/5;
+}
+#good_sprite1 {
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/svg/prod/good_egg_1.svg);
+  background-size: cover;
+}
+#good_sprite2 {
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/svg/prod/good_egg_2.svg);
+  background-size: cover;
+}
+#good_sprite3 {
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/svg/prod/good_meat_1.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#bad_sprite1 {
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/svg/prod/bad_rock_1.svg);
+  background-size: cover;
+}
+#bad_sprite2 {
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/svg/prod/bad_log_1.svg);
+  background-size: cover;
+}
+/* GOOD BAD ELEMENTER STOP */
+/* BUTTONS START */
+.cta {
+  animation-name: cta_kf;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+@keyframes cta_kf {
+  100% {
+    scale: 1.05;
+  }
+}
+#play_button {
+  position: absolute;
+  height: 15%;
+  width: 17%;
+  aspect-ratio: 16/9;
+  top: 60%;
+  left: 25%;
+  background-image: url(../assets/svg/prod/play_button.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#howto_button {
+  position: absolute;
+  height: 15%;
+  width: 18%;
+  aspect-ratio: 16/9;
+  top: 60%;
+  left: 55%;
+  background-image: url(../assets/svg/prod/howto_button.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.playAgain_button {
+  position: absolute;
+  height: 18%;
+  width: 30%;
+  aspect-ratio: 16/9;
+  top: 25%;
+  left: 36%;
+  background-image: url(../assets/svg/prod/playagain_button.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#back_button1 {
+  position: absolute;
+  height: 18%;
+  width: 30%;
+  aspect-ratio: 16/9;
+  top: 65%;
+  left: 42%;
+  background-image: url(../assets/svg/prod/back_button.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#back_button2 {
+  position: absolute;
+  height: 18%;
+  width: 30%;
+  aspect-ratio: 16/9;
+  top: 35%;
+  left: 38%;
+  background-image: url(../assets/svg/prod/back_button.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#back_button3 {
+  position: absolute;
+  height: 18%;
+  width: 30%;
+  aspect-ratio: 16/9;
+  top: 94%;
+  left: 38%;
+  background-image: url(../assets/svg/prod/back_button.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+/* BUTTONS STOP */
+#rateMyGame {
+  height: 100%;
+  width: 35%;
+  position: absolute;
+  top: 85%;
+  left: 31%;
+}
+#rateMyGame :hover {
+  background-color: #3b9410;
+  border-radius: 8px;
+  transition: 0.3s ease-in;
+}

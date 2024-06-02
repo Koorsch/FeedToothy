@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robot" content="noindex">
+    <link rel="icon" type="image/x-icon" href="assets/svg/prod/favicon.svg">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <title>Tema 4 - Animationer - Spillet - Feed Toothy</title>
+</head>
+
+<body>
+    <script>
+        function toggleMenu() {
+            document.querySelector(".menu").classList.toggle("open");
+        }
+    </script>
+    <header>
+        <nav>
+            <div id="logo">
+                <h1><a href="index.html">Feed Toothy</a></h1>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="spil.html">The Game</a></li>
+                    <li><a href="grafik.html">Graphics</a></li>
+                    <li><a href="assets.html">Assets</a></li>
+                    <li><a href="teknik.html">Technical Documentation</a></li>
+                </ul>
+                <div class="burger" onclick="toggleMenu()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="screen">
+            <div id="game">
+                <div id="game_background"></div>
+                <div id="game_midground"></div>
+                <div id="game_elements" class="hide">
+                    <div id="toothy" class="toothyMove"></div>
+                    <div id="good_container1">
+                        <div id="good_sprite1"></div>
+                    </div>
+                    <div id="good_container2">
+                        <div id="good_sprite2"></div>
+                    </div>
+                    <div id="good_container3">
+                        <div id="good_sprite3"></div>
+                    </div>
+                    <div id="bad_container1">
+                        <div id="bad_sprite1"></div>
+                    </div>
+                    <div id="bad_container2">
+                        <div id="bad_sprite2"></div>
+                    </div>
+                </div>
+                <div id="game_foreground"></div>
+                <div id="game_ui" class="hide">
+                    <div id="score_board">
+                        <div>Points:<span id="score">0</span></div>
+                    </div>
+                    <div id="life_board">
+                        <div>Life: <span id="life">3</span></div>
+                    </div>
+                    <div id="time_board">
+                        <div id="time_container">
+                            <div id="time_sprite"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="start" class="hide">
+                <div id="start_screen"></div>
+                <div id="play_button" class="button"></div>
+                <div id="howto_button" class="button"></div>
+                <div id="rateMyGame" class="button toothyMove">
+                    <p class="header"><a href="https://forms.gle/VoAef5FvPGJJTPjW8" target="_blank">Help me out by doing
+                            the
+                            survey <br>Click
+                            here!</a></p>
+                </div>
+            </div>
+            <div id="tutorial" class="hide">
+                <div id="tutorial_screen">
+                    <div id="tut_text">
+                        <h3 class="header">Instructions (how to feed Toothy)</h3>
+                    </div>
+                    <div id="instructions">
+                        <div>
+                            <h2 class="header">Help this little hungry dino by collecting "good things"</h2>
+                            <img src="assets/svg/prod/good_egg_1.svg" alt="Good egg 1">
+                            <img src="assets/svg/prod/good_egg_2.svg" alt="Good egg 1">
+                            <img src="assets/svg/prod/good_meat_1.svg" alt="Good egg 1">
+                            <h3 class="header">Avoid anything else or Toothy gets a tummy ache!</h3>
+                        </div>
+                    </div>
+                </div>
+                <div id="back_button3" class="button"></div>
+            </div>
+            <div id="game_over" class="hide">
+                <div id="game_over_screen">
+                    <span id="go_points">POINTS</span>
+                </div>
+                <div id="back_button2" class="button"></div>
+            </div>
+            <div id="game_complete" class="hide">
+                <div id="game_complete_screen">
+                    <span id="gc_points">POINTS</span>
+                </div>
+                <div id="back_button1" class="button"></div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p id="footertext">Andreas Ekvall-Hofvander // Feed Toothy 2023</p>
+    </footer>
+    <script src="js/game.js">
+    </script>
+    <audio src="assets/sound/good1_1.mp3" id="good1_1"></audio>
+    <audio src="assets/sound/good1_2.mp3" id="good1_2"></audio>
+    <audio src="assets/sound/good1_3.mp3" id="good1_3"></audio>
+    <audio src="assets/sound/good1_4.mp3" id="good1_4"></audio>
+    <audio src="assets/sound/good2.mp3" id="good2"></audio>
+    <audio src="assets/sound/bad.mp3" id="bad"></audio>
+    <audio src="assets/sound/game_lose.mp3" id="game_lose"></audio>
+    <audio src="assets/sound/game_win.mp3" id="game_win"></audio>
+</body>
+
+</html>
